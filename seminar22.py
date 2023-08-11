@@ -7,29 +7,37 @@
 
 # X + Y = S  =>  X = S - Y
 # X * Y = P  =>  (S - Y) * Y = P  =>  -Y^2 + Y*S - P = 0  =>  Y^2 - Y*S + P = 0
-import math
+# import math
 
-S = int(input())
-P = int(input())
+# S = int(input())
+# P = int(input())
 
-a = 1
-b = -S
-c = P
-x = 0
-x1 = 0
-x2 = 0
+# a = 1
+# b = -S
+# c = P
+# x = 0
+# x1 = 0
+# x2 = 0
 
-D = b*b - 4*a*c
+# D = b*b - 4*a*c
 
-if D < 0:
-    print('Корней нет')
+# if D < 0:
+#     print('Корней нет')
 
-if D == 0:
-    x = -b/2*a
-    y = S - x
-    print(x,y)
-    
-if D > 0:
-    x1 = (-b + math.sqrt(D)) / (2*a)
-    x2 = (-b - math.sqrt(D)) / (2*a)
-    print(x1, x2)
+# if D == 0:
+#     x = -b/2*a
+#     y = S - x
+#     print(x,y)
+
+# if D > 0:
+#     x1 = (-b + math.sqrt(D)) / (2*a)
+#     x2 = (-b - math.sqrt(D)) / (2*a)
+#     print(x1, x2)
+
+S = int(input('Введите сумму:  '))
+P = int(input('Введите произведение:  '))
+
+for x in range(0, 1000):
+    for y in range(0, 1000):
+        if (x + y == S and x*y == P):
+            print(x,y)
